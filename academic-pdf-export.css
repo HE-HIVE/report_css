@@ -6,16 +6,16 @@ Auth: Nicklas Vraa
 */
 
 @font-face {
-    font-family: "LMRoman10";
+    font-family: LMRoman10;
     font-style: normal;
     font-weight: 400;
-    src: url("https://fonts.cdnfonts.com/s/266/lmroman10-regular.woff") format("woff");
+    src: url(https://fonts.cdnfonts.com/s/266/lmroman10-regular.woff) format(woff);
 }
 @font-face {
-    font-family: "LMRomanCaps10";
+    font-family: LMRomanCaps10;
     font-style: normal;
     font-weight: 400;
-    src: url("https://fonts.cdnfonts.com/s/266/lmromancaps10-regular.woff") format("woff");
+    src: url(https://fonts.cdnfonts.com/s/266/lmromancaps10-regular.woff) format(woff);
 }
 
 @media print {
