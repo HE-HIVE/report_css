@@ -162,6 +162,7 @@ Auth: Nicklas Vraa
         margin: 10px auto 5px !important;
         border-top: 1px solid #292929 !important;
         border-bottom: 1px solid #292929 !important;
+        overflow-wrap: anywhere
     }
     th { /* Table headers. */
         color: black !important;
