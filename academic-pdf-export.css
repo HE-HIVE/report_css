@@ -166,13 +166,13 @@ Auth: Nicklas Vraa
     th { /* Table headers. */
         color: black !important;
         font-weight: normal !important;
-        border: 1px !important;
+        border: 1px solid !important;
         border-bottom: 1px solid darkgray !important;
         padding: 2px 5px !important;
         -fs-table-paginate: paginate;
     }
     td {
-        border: 1px !important;
+        border: 1px solid !important;
         padding: 2px 5px !important;
     }
 
