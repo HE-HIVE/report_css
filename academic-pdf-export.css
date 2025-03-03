@@ -154,8 +154,6 @@ Auth: Nicklas Vraa
     /* Tables. ----------------------------------------------------------------------------- */
     table, pre {
         page-break-inside: avoid !important;
-        border: 1px solid black;
-        border-collapse: collapse;
     }
     table {
         font-family: LMRoman10 !important;
@@ -168,12 +166,14 @@ Auth: Nicklas Vraa
     th { /* Table headers. */
         color: black !important;
         font-weight: normal !important;
+        border: none !important;
         border-bottom: 1px solid darkgray !important;
         padding: 2px 5px !important;
         -fs-table-paginate: paginate;
     }
     td {
         padding: 2px 5px !important;
+        border: none !important;
     }
 
     /* Lists ------------------------------------------------------------------------------- */
