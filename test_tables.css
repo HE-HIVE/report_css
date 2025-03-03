@@ -154,8 +154,6 @@ Auth: Nicklas Vraa
     /* Tables. ----------------------------------------------------------------------------- */
     table, pre {
         page-break-inside: avoid !important;
-        border: 1px solid black !important;
-        border-collapse: collapse;
     }
     table {
         font-family: LMRoman10 !important;
