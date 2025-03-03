@@ -160,7 +160,8 @@ Auth: Nicklas Vraa
         font-size: 7pt !important;
         text-align: left !important;
         margin: 10px auto 5px !important;
-        border: 1px solid black !important;
+        border-right: 1px solid black !important;
+        border-left: 1px solid black !important;
         border-top: 1px solid #292929 !important;
         border-bottom: 1px solid #292929 !important;
         border-collapse: collapse;
@@ -168,14 +169,16 @@ Auth: Nicklas Vraa
     th { /* Table headers. */
         color: black !important;
         font-weight: normal !important;
-        border: 1px solid black !important;
+        border-right: 1px solid black !important;
+        border-left: 1px solid black !important;
         border-bottom: 2px solid darkgray !important;
         padding: 2px 5px !important;
         -fs-table-paginate: paginate;
     }
     td {
         padding: 2px 5px !important;
-        border: 1px solid black !important;
+        border-right: 1px solid black !important;
+        border-left: 1px solid black !important;
     }
 
     /* Lists ------------------------------------------------------------------------------- */
