@@ -168,12 +168,12 @@ Auth: Nicklas Vraa
         font-weight: normal !important;
         border: none !important;
         border-bottom: 1px solid darkgray !important;
-        -fs-table-paginate: paginate;
         padding: 2px 5px !important;
+        -fs-table-paginate: paginate;
     }
     td {
-        border: none !important;
         padding: 2px 5px !important;
+        border: none !important;
     }
 
     /* Lists ------------------------------------------------------------------------------- */
