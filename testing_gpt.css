@@ -1,0 +1,76 @@
+/* General Page Styles */
+@page {
+  margin: 2cm;
+  size: A4;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12pt;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Title and Subtitle */
+h1, h2 {
+  text-align: center;
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+h1 {
+  font-size: 24pt;
+  font-weight: bold;
+  border-bottom: 2px solid #444;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-size: 18pt;
+  color: #666;
+  margin-bottom: 0.75em;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  table-layout: auto; /* Dynamic column sizing */
+  word-wrap: break-word;
+}
+
+th, td {
+  border: 1px solid #888;
+  padding: 0.5em;
+  vertical-align: top;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Ensure text wraps within cells */
+td {
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+/* Optional: Alternating row colors for clarity */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Page break after large tables if needed */
+table {
+  page-break-inside: auto;
+}
+
+tr {
+  page-break-inside: avoid;
+  page-break-after: auto;
+}
