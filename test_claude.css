@@ -1,0 +1,301 @@
+/* Professional PDF CSS with Responsive Tables */
+
+/* Document settings */
+@page {
+  size: 8.5in 11in; /* US Letter size */
+  margin: 1in; /* 1 inch margin on all sides */
+}
+
+body {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 11pt;
+  line-height: 1.5;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page breaks */
+.page-break {
+  page-break-after: always;
+}
+
+/* Avoid orphans and widows */
+p, h1, h2, h3, h4, h5, h6 {
+  orphans: 3;
+  widows: 3;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  page-break-after: avoid;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+h1 {
+  font-size: 18pt;
+  border-bottom: 1px solid #cccccc;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 16pt;
+}
+
+h3 {
+  font-size: 14pt;
+}
+
+h4 {
+  font-size: 12pt;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  page-break-inside: avoid;
+}
+
+/* Prevent large tables from breaking across pages */
+.keep-together {
+  page-break-inside: avoid;
+}
+
+/* Allow large tables to break across pages */
+.allow-page-break {
+  page-break-inside: auto;
+}
+
+/* Table caption */
+caption {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0.5em;
+  font-size: 12pt;
+  caption-side: top;
+}
+
+/* Table headers */
+thead {
+  display: table-header-group; /* Repeat headers on each page */
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333333;
+  font-weight: bold;
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #dddddd;
+  vertical-align: middle;
+  font-size: 11pt;
+}
+
+/* Table body */
+td {
+  padding: 8px;
+  border: 1px solid #dddddd;
+  vertical-align: top;
+  word-wrap: break-word; /* Allow long words to break */
+  overflow-wrap: break-word;
+  hyphens: auto; /* Apply hyphenation for very long words */
+}
+
+/* Dynamic table cells - allow content to determine size */
+td.fit-content {
+  width: auto;
+  white-space: nowrap;
+}
+
+td.expand {
+  width: 100%;
+}
+
+/* Zebra striping for better readability */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Table hover effect (for screen viewing) */
+@media screen {
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+/* Table footer */
+tfoot {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+/* Table borders */
+table.bordered {
+  border: 2px solid #dddddd;
+}
+
+/* Compact table style */
+table.compact td, 
+table.compact th {
+  padding: 4px;
+  font-size: 10pt;
+}
+
+/* Ensure tables don't overflow the page */
+table {
+  max-width: 100%;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Print-specific styles */
+@media print {
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .no-print {
+    display: none;
+  }
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+/* Document sections */
+.header {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2em;
+  font-size: 9pt;
+  color: #666666;
+}
+
+/* Page numbers */
+@page {
+  @bottom-center {
+    content: "Page " counter(page) " of " counter(pages);
+    font-size: 9pt;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+  }
+}
+
+/* Document metadata */
+.document-title {
+  font-size: 24pt;
+  text-align: center;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.document-subtitle {
+  font-size: 14pt;
+  text-align: center;
+  margin-bottom: 1.5em;
+  font-weight: normal;
+  color: #666666;
+}
+
+.document-date {
+  text-align: center;
+  margin-bottom: 2em;
+  font-size: 10pt;
+  color: #666666;
+}
+
+/* Custom table variations */
+table.borderless td,
+table.borderless th {
+  border: none;
+  border-bottom: 1px solid #dddddd;
+}
+
+table.colorful th {
+  background-color: #4472C4;
+  color: white;
+}
+
+table.colorful tr:nth-child(even) {
+  background-color: #D9E1F2;
+}
+
+table.colorful tr:nth-child(odd) {
+  background-color: #E9EDF7;
+}
+
+/* Responsive tables for screen viewing */
+@media screen and (max-width: 600px) {
+  table.responsive {
+    display: block;
+    width: 100%;
+  }
+  
+  table.responsive thead, 
+  table.responsive tbody, 
+  table.responsive th, 
+  table.responsive td, 
+  table.responsive tr {
+    display: block;
+  }
+  
+  table.responsive thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  table.responsive tr {
+    border: 1px solid #ccc;
+    margin-bottom: 0.625em;
+  }
+  
+  table.responsive td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  
+  table.responsive td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    content: attr(data-label);
+    font-weight: bold;
+  }
+}
