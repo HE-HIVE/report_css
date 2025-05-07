@@ -1,0 +1,171 @@
+/* General styles for screen preview (optional) */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    color: #333;
+}
+.report-header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* --- PRINT STYLES START HERE --- */
+@media print {
+    /* Hide elements not for print */
+    .no-print, .report-header {
+        display: none !important;
+    }
+
+    /* Basic document setup */
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Common professional sans-serif */
+        /* Or a serif font: font-family: "Times New Roman", Times, serif; */
+        font-size: 11pt; /* Good readable size for print */
+        line-height: 1.4;
+        color: #000; /* Pure black for text for best contrast */
+        background-color: #fff; /* Ensure white background */
+        margin: 0; /* Remove browser default margins */
+        padding: 0;
+    }
+
+    /* Page setup */
+    @page {
+        size: A4; /* Or 'letter', 'legal', etc. */
+        margin: 2cm; /* Standard margin, adjust as needed */
+
+        /* Example for page numbers/headers (support varies by PDF generator) */
+        /*
+        @top-center {
+            content: "Company Confidential";
+            font-size: 9pt;
+            color: #666;
+        }
+        @bottom-right {
+            content: "Page " counter(page) " of " counter(pages);
+            font-size: 9pt;
+            color: #666;
+        }
+        */
+    }
+
+    /* Ensure content starts on the first page correctly if you have a wrapper */
+    .page {
+        page-break-after: always; /* Each .page div will try to start a new page if it's the last one */
+    }
+    .page:last-child {
+        page-break-after: auto;
+    }
+
+
+    /* Headings */
+    h1, h2, h3, h4, h5, h6 {
+        color: #222;
+        margin-top: 1.5em;
+        margin-bottom: 0.8em;
+        page-break-after: avoid; /* Try to keep heading with following content */
+        font-weight: bold;
+    }
+
+    .document-title { /* Special styling for the main document title */
+        font-size: 24pt;
+        margin-top: 0;
+        margin-bottom: 0.5em;
+        text-align: center;
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.3em;
+        page-break-after: avoid;
+    }
+
+    .subtitle {
+        font-size: 12pt;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 2em;
+        color: #555;
+        font-style: italic;
+    }
+
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; border-bottom: 1px solid #ccc; padding-bottom: 0.2em; }
+    h3 { font-size: 13pt; }
+
+    /* Paragraphs */
+    p {
+        margin-bottom: 1em;
+        widows: 3; /* Minimum lines at the end of a paragraph on a new page */
+        orphans: 3; /* Minimum lines at the bottom of a page for a paragraph */
+    }
+
+    /* Links - show URL for printed version */
+    a {
+        color: #000; /* Make links black for print unless specifically styled */
+        text-decoration: none; /* Often preferred in formal documents */
+    }
+    /*
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.9em;
+        color: #555;
+    }
+    a[href^="#"]:after, a[href^="mailto:"]:after {
+        content: "";
+    }
+    */
+
+    /* Tables */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1.5em;
+        font-size: 10pt; /* Slightly smaller for tables if needed */
+        page-break-inside: auto; /* Allow tables to break across pages if necessary */
+        table-layout: auto; /* DEFAULT: This allows dynamic cell sizing based on content */
+    }
+
+    thead {
+        display: table-header-group; /* CRITICAL: Repeats header on each page for long tables */
+        background-color: #e0e0e0; /* Light gray for header background */
+        font-weight: bold;
+    }
+
+    tfoot {
+        display: table-footer-group; /* Repeats footer on each page */
+        background-color: #f0f0f0;
+        font-weight: bold;
+    }
+
+    th, td {
+        border: 1px solid #888; /* Slightly softer border color */
+        padding: 8px 10px; /* Adequate padding */
+        text-align: left;
+        vertical-align: top; /* Align content to the top of cells */
+        word-wrap: break-word; /* Helps break long words if necessary, though dynamic sizing handles most */
+    }
+
+    th {
+        color: #000;
+    }
+
+    tbody tr {
+        page-break-inside: avoid; /* Try to keep rows from breaking mid-row */
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #f9f9f9; /* Zebra striping for readability */
+    }
+
+    /* Utility for forcing a page break */
+    .new-page {
+        page-break-before: always;
+    }
+
+    /* Images (if any) */
+    img {
+        max-width: 100% !important; /* Ensure images don't overflow page */
+        height: auto;
+        page-break-inside: avoid;
+    }
+}
