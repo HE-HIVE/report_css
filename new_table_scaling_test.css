@@ -166,27 +166,29 @@ Auth: Nicklas Vraa
         margin: 20px auto 20px !important; /* Increased from 10px auto 5px */
         border-top: 1px solid #292929 !important;
         border-bottom: 1px solid #292929 !important;
-        border-collapse: collapse !important;
-        width: auto !important; /* Let table size itself based on content */
-        max-width: 100% !important; /* Prevent overflow */
-        table-layout: auto !important; /* Allow flexible column sizing */
+        position: relative !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: calc(100% + 4cm) !important; /* Extend beyond content area by margin width */
+        max-width: calc(100vw - 0.5cm) !important; /* Ensure it doesn't exceed page width */
+        margin-left: -2cm !important; /* Offset by half the margin to center */
+        margin-right: -2cm !important;  
     }
     th { /* Table headers. */
         color: black !important;
         font-weight: normal !important;
         border: none !important;
         border-bottom: 1px solid darkgray !important;
-        padding: 2px 3px !important; /* Increased from 2px 5px */
+        padding: 5px 10px !important; /* Increased from 2px 5px */
         -fs-table-paginate: paginate;
     }
     td {
-        padding: 2px 3px !important; /* Increased from 2px 5px */
+        padding: 5px 10px !important; /* Increased from 2px 5px */
         border: none !important;
     }
     tr:not(:last-child) td {
         padding-bottom: 8px !important; /* Added extra spacing between rows */
     }
-
     /* Lists ------------------------------------------------------------------------------- */
     ul, ol, dl {
         page-break-before: avoid !important;
