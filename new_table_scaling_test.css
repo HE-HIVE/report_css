@@ -161,15 +161,17 @@ Auth: Nicklas Vraa
     }
     table {
         font-family: LMRoman10 !important;
-        font-size: 7pt !important;
+        font-size: 6pt !important;
         text-align: left !important;
         margin: 20px auto 20px !important; /* Increased from 10px auto 5px */
         border-top: 1px solid #292929 !important;
         border-bottom: 1px solid #292929 !important;
         
-        width: 98% !important;
-        max-width: 98% !important;
-        table-layout: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        transform: scale(0.75) !important;  
+        transform-origin: center !important;
+        table-layout: fixed !important; 
         margin-left: auto !important;
         margin-right: auto !important;
     }
@@ -182,7 +184,9 @@ Auth: Nicklas Vraa
         white-space: normal !important;
         word-wrap: break-word !important;
         hyphens: auto !important;
-        line-height: 1.1 !important;
+        line-height: 1.0 !important;
+        width: auto !important;
+        max-width: none !important;
     }
     th { /* Table headers. */
         color: black !important;
