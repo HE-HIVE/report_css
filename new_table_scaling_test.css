@@ -1,0 +1,243 @@
+/*
+Desc: Style obsidian-notes to look like academic papers when exported as pdf.
+      Include this file in your obsidian snippets folder and activate within obsidian.
+
+Auth: Nicklas Vraa
+*/
+
+@font-face {
+    font-family: LMRoman10;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.cdnfonts.com/s/266/lmroman10-regular.woff) format("woff");
+}
+
+@font-face {
+    font-family: LMRoman10;
+    font-style: bold;
+    font-weight: 700;
+    src: url(https://fonts.cdnfonts.com/s/266/lmroman10-bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: LMRoman10;
+    font-style: italic;
+    font-weight: 700;
+    src: url(https://fonts.cdnfonts.com/s/266/lmroman10-italic.woff) format('woff');
+}
+@font-face {
+    font-family: LMRomanCaps10;
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.cdnfonts.com/s/266/lmromancaps10-regular.woff) format("woff");
+}
+
+
+@media print {
+
+    /* Document-wide. ---------------------------------------------------------------------- */
+    @page { /* Page structure. */
+        margin: 2cm !important;
+    }
+    a:link, a:visited, a { /* Links. */
+        color: black !important;
+        text-decoration: none !important;
+    }
+
+    /* Main body of text. ------------------------------------------------------------------ */
+    body {
+        tab-size: 4 !important;
+        --code-background: white !important;
+        --code-normal: black !important;
+        counter-reset: h2counter h3counter h4counter;
+    }
+    p {
+        font-family: LMRoman10 !important;
+        font-size: 10pt !important;
+        text-align: justify !important;
+        line-height: 1.2 !important;
+        margin-top: 5px !important;
+    }
+    strong {
+        font-weight: bold !important;
+        color: black !important;
+    }
+    em {
+        font-style: italic !important;
+        color: black !important;
+    }
+    p, h1, h2, h3, h4, h5, h6 {
+        orphans: 3;
+        widows: 3;
+    }
+    /* Header styling and automatic numbering. --------------------------------------------- */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: LMRoman10 !important;
+        color: black !important;
+        page-break-after: avoid;
+        page-break-inside: avoid;
+        font-size: 12pt !important;
+        font-weight: bold !important;
+        margin-bottom: 0.8em !important; /* Increased from 0.5em */
+        margin-top: 2em !important; /* Increased from 1.5em */
+    }
+    h1 { /* Title. */
+        font-family: LMRoman10 !important;
+        text-align: left !important;
+        font-size: 18pt !important;
+        font-weight: bold !important;
+        border-bottom: 1px solid #cccccc;
+        padding-bottom: 0.7em; /* Increased from 0.3em */
+        margin-bottom: 1.2em !important; /* Added extra space after h1 border */
+    }
+    h6 { /* Subtitle. */
+        font-family: LMRoman10 !important;
+        text-align: left !important;
+        font-size: 11pt !important;
+        font-weight: normal !important;
+        margin-top: 0.8em !important; /* Increased from 6px */
+    }
+    h2 {
+        font-size: 12pt !important;
+    }
+    h3 {
+        font-size: 12pt !important;
+    }
+    h4 {
+        font-size: 12pt !important;
+    }
+    /* Credits. ---------------------------------------------------- */
+
+    del { /* Credits, i.e. author information. */
+        font-family: LMRoman10 !important;
+        display: block !important;
+        text-align: center !important;
+        font-size: 10pt !important;
+        text-decoration: none;
+        margin-top: 12px !important; /* Increased from 8px */
+        padding-bottom: 16px !important; /* Increased from 10px */
+    }
+
+    /* Code and math blocks. --------------------------------------------------------------- */
+    pre { /* background and border of block. */
+        background-color: #fff !important;
+        border-style: dashed !important;
+        border-radius: 0px !important;
+        border-width: 1px 0px !important;
+        border-color: darkgray !important;
+        line-height: 1 !important;
+        margin: 1.5em 0 !important; /* Added more vertical spacing */
+    }
+    code {
+        font-family: LMRoman10 !important;
+        font-size: 10pt !important;
+        color: #292929 !important;
+    }
+    mjx-math {
+        font-size: 90% !important;
+    }
+    math-block {
+        page-break-before: avoid !important;
+    }
+
+    /* Figures. ---------------------------------------------------------------------------- */
+    svg, img {
+        display: block !important;
+        /* filter: invert(100%) !important; */
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+        margin: 18px auto 10px !important; /* Increased from 10px auto 5px */
+    }
+    figcaption {
+        font-family: LMRoman10 !important;
+        text-align: center !important;
+        margin-bottom: 24px !important; /* Increased from 16px */
+        font-size: 8pt !important;
+    }
+
+    /* Tables. ----------------------------------------------------------------------------- */
+    table, pre {
+        page-break-inside: avoid !important;
+    }
+    table {
+        font-family: LMRoman10 !important;
+        font-size: 7pt !important;
+        text-align: left !important;
+        margin: 20px auto 20px !important; /* Increased from 10px auto 5px */
+        border-top: 1px solid #292929 !important;
+        border-bottom: 1px solid #292929 !important;
+        
+        width: 98% !important;
+        max-width: 98% !important;
+        table-layout: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+  
+    th, td {
+        padding: 3px 5px !important; /* Reduced padding */
+        border: none !important;
+        
+        /* Allow text wrapping */
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        hyphens: auto !important;
+        line-height: 1.1 !important;
+    }
+    th { /* Table headers. */
+        color: black !important;
+        font-weight: normal !important;
+        border-bottom: 1px solid darkgray !important;
+        -fs-table-paginate: paginate;
+    }
+    tr:not(:last-child) td {
+        padding-bottom: 5px !important; /* Added extra spacing between rows */
+    }
+
+    /* Lists ------------------------------------------------------------------------------- */
+    ul, ol, dl {
+        page-break-before: avoid !important;
+        font-family: LMRoman10 !important;
+        font-size: 10pt !important;
+        line-height: 1.1 !important;
+        margin-top: 10px !important; /* Increased from 0px */
+        padding-top: 5px !important; /* Increased from 0px */
+        margin-bottom: 15px !important; /* Added bottom margin */
+    }
+    ul li, ol li { /* Added spacing between list items */
+        margin-bottom: 6px !important;
+    }
+    ul li { /* Adjusts size of bullet points. */
+        list-style-type: none !important;
+        position: relative !important;
+    }
+    ul li::before {
+        content: '•' !important;
+        position: absolute !important;
+        left: -1.15em !important;
+        top: -0.05em !important;
+        font-size: 1.1em !important;
+    }
+
+    /* Horizontal separator. --------------------------------------------------------------- */
+    hr { /* Manual page-break using "---". */
+        border: none !important;
+        border-top: 0px solid lightgray !important;
+        page-break-after: always !important;
+        margin: 30px 0 !important; /* Added extra spacing */
+    }
+
+    /* Additional settings. ---------------------------------------------------------------- */
+    blockquote {
+        display: block !important;
+        text-align: center !important;
+        font-size: 10pt !important;
+        color: black !important;
+        border: none !important;
+        padding: 10px 0 !important; /* Increased from 0px */
+        margin: 15px auto !important; /* Increased from 5px */
+    }
+    .mermaid { /* Inline diagrams. */
+        color: black !important;
+    }
+}
