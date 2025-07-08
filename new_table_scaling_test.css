@@ -176,7 +176,7 @@ Auth: Nicklas Vraa
         -fs-table-paginate: paginate;
     }
     td {
-        padding: 5px 10px !important; /* Increased from 2px 5px */
+        padding: 2px 3px !important; /* Increased from 2px 5px */
         border: none !important;
     }
     tr:not(:last-child) td {
