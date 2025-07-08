@@ -177,7 +177,6 @@ Auth: Nicklas Vraa
         border: none !important;
         border-bottom: 1px solid darkgray !important;
         padding: 2px 3px !important; /* Increased from 2px 5px */
-        white-space: nowrap !important;
         -fs-table-paginate: paginate;
     }
     td {
