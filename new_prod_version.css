@@ -176,10 +176,13 @@ Auth: Nicklas Vraa
         border-collapse: collapse !important;
     }
 
+    th, td {
+        border: 1px solid #ddd !important; /* Adds a light border to all cells */
+    }
+
     th { /* Table headers. */
        font-family: LMRoman10 !important;
        font-weight: bold !important; 
-       border: none !important;
        border-bottom: 1px solid darkgray !important;
        padding: 4px 6px !important;
        text-align: left !important;
@@ -194,7 +197,6 @@ Auth: Nicklas Vraa
     td {
        font-family: LMRoman10 !important;
        padding: 3px 4px !important;
-       border: none !important;
        text-align: left !important;
        vertical-align: middle !important;
        font-size: 7pt !important;
