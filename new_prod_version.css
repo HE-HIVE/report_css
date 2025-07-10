@@ -178,7 +178,7 @@ Auth: Nicklas Vraa
 
     th { /* Table headers. */
        font-family: LMRoman10 !important;
-       font-weight: normal !important; 
+       font-weight: bold !important; 
        border: none !important;
        border-bottom: 1px solid darkgray !important;
        padding: 4px 6px !important;
