@@ -135,7 +135,7 @@ Auth: Nicklas Vraa
     }
     code {
         font-family: LMRoman10 !important;
-        font-size: 10pt !important;
+        font-size: 8pt !important;
         color: #292929 !important;
     }
     mjx-math {
@@ -161,10 +161,7 @@ Auth: Nicklas Vraa
     }
 
     /* Tables. ----------------------------------------------------------------------------- */
-    .landscape-table {
-        page-break-before: always !important;
-        page: landscape !important;    
-    }
+    
 
     table {
         /* --- Sizing and Layout --- */
@@ -186,6 +183,20 @@ Auth: Nicklas Vraa
         border-collapse: collapse !important;
     }
 
+    .landscape-table {
+        page-break-before: always !important;
+        page: landscape !important;    
+    }
+
+    table.small-table {
+        font-size: 9pt !important; /* Larger font for small tables */
+    }
+    table.small-table th,
+    table.small-table td {
+        font-size: 9pt !important;
+        padding: 6px 8px !important; /* More padding for readability */
+    }
+
     th, td {
         border: 1px solid #ddd !important; /* Adds a light border to all cells */
     }
@@ -198,7 +209,7 @@ Auth: Nicklas Vraa
        text-align: left !important;
        vertical-align: middle !important;
        -fs-table-paginate: paginate;
-       font-size: 7pt !important;
+       font-size: 8pt !important;
        line-height: 1.1 !important;
        word-wrap: normal !important;
        hyphens: auto !important;
@@ -209,7 +220,7 @@ Auth: Nicklas Vraa
        padding: 3px 4px !important;
        text-align: left !important;
        vertical-align: middle !important;
-       font-size: 7pt !important;
+       font-size: 8pt !important;
        line-height: 1.1 !important;
        word-wrap: normal !important;
        hyphens: auto !important;
