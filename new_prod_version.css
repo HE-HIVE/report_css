@@ -39,6 +39,11 @@ Auth: Nicklas Vraa
     @page { /* Page structure. */
         margin: 2cm !important;
     }
+
+    @page landscape {
+        size: A4 landscape;
+        margin: 1.5cm;
+    }
     a:link, a:visited, a { /* Links. */
         color: black !important;
         text-decoration: none !important;
@@ -156,6 +161,11 @@ Auth: Nicklas Vraa
     }
 
     /* Tables. ----------------------------------------------------------------------------- */
+    .landscape-table {
+        page-break-before: always !important;
+        page: landscape !important;    
+    }
+
     table {
         /* --- Sizing and Layout --- */
         width: auto !important;                  /* Let content determine the table width to prevent squishing */
