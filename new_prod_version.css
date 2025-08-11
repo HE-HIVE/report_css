@@ -151,7 +151,12 @@ Auth: Nicklas Vraa
         /* filter: invert(100%) !important; */
         page-break-inside: avoid !important;
         page-break-after: avoid !important;
-        margin: 18px auto 10px !important; /* Increased from 10px auto 5px */
+        width: auto !important;                  /* Let content determine the table width to prevent squishing */
+        /* --- Centering and Overflow --- */
+        position: relative !important;           /* Enable positioning */
+        left: 50% !important;                    /* Move the table's left edge to the page's center */
+        transform: translateX(-50%) !important;  /* Pull the table back by half of its own width */
+        margin: 20px 0 !important;   
     }
     figcaption {
         font-family: LMRoman10 !important;
