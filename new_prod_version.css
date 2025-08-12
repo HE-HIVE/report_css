@@ -65,14 +65,15 @@ Auth: Nicklas Vraa
     }
     .toc {
         font-family: Arial, sans-serif;
-        font-size: 12pt;
-        line-height: 1.6;
+        font-size: 10pt;
+        line-height: 1.4;
         margin: 0.5em 0;
         padding: 1em;
         border: 1px solid #ccc;
         background: #fafafa;
         display: block;
         white-space: pre-line;
+        break-after: always;
     }
 
     /* Style each line break to create subtle dividing lines */
@@ -81,7 +82,7 @@ Auth: Nicklas Vraa
         margin: 8px 0;
         border-bottom: 1px solid #e0e0e0;
         content: "";
-        height: 1px;
+        height: 0.7px;
     }
 
     strong {
