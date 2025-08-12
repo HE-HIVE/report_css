@@ -126,17 +126,12 @@ Auth: Nicklas Vraa
     /* Code and math blocks. --------------------------------------------------------------- */
     pre { /* background and border of block. */
         background-color: #fff !important;
-        border-style: dashed !important;
-        border-radius: 0px !important;
-        border-width: 1px 0px !important;
-        border-color: darkgray !important;
         line-height: 1 !important;
         margin: 1.5em 0 !important; /* Added more vertical spacing */
     }
     code {
         font-family: LMRoman10 !important;
-        font-size: 8pt !important;
-        color: #292929 !important;
+        font-size: 10pt !important;
     }
     mjx-math {
         font-size: 90% !important;
