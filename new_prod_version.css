@@ -63,6 +63,27 @@ Auth: Nicklas Vraa
         line-height: 1.2 !important;
         margin-top: 5px !important;
     }
+    .toc {
+        font-family: Arial, sans-serif;
+        font-size: 12pt;
+        line-height: 1.6;
+        margin: 0.5em 0;
+        padding: 1em;
+        border: 1px solid #ccc;
+        background: #fafafa;
+        display: block;
+        white-space: pre-line;
+    }
+
+    /* Style each line break to create subtle dividing lines */
+    .toc br {
+        display: block;
+        margin: 8px 0;
+        border-bottom: 1px solid #e0e0e0;
+        content: "";
+        height: 1px;
+    }
+
     strong {
         font-weight: bold !important;
         color: black !important;
@@ -272,13 +293,5 @@ Auth: Nicklas Vraa
     }
     .mermaid { /* Inline diagrams. */
         color: black !important;
-    }
-    .toc p {
-        font-size: 12pt;
-        line-height: 1.4;
-        margin: 0.2em 0;
-        display: flex;
-        border-bottom: 1px dotted #999; /* dotted leader effect */
-        padding-bottom: 2px;
     }
 }
