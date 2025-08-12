@@ -172,7 +172,6 @@ Auth: Nicklas Vraa
         /* --- Sizing and Layout --- */
         width: auto !important;                  /* Let content determine the table width to prevent squishing */
         table-layout: auto !important;           /* Let content determine column widths */
-        page-break-inside: avoid !important;
 
         /* --- Centering and Overflow --- */
         position: relative !important;           /* Enable positioning */
@@ -275,5 +274,13 @@ Auth: Nicklas Vraa
     }
     .mermaid { /* Inline diagrams. */
         color: black !important;
+    }
+    .toc p {
+        font-size: 12pt;
+        line-height: 1.4;
+        margin: 0.2em 0;
+        display: flex;
+        border-bottom: 1px dotted #999; /* dotted leader effect */
+        padding-bottom: 2px;
     }
 }
