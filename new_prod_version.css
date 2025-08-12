@@ -133,6 +133,12 @@ Auth: Nicklas Vraa
     h4 {
         font-size: 12pt !important;
     }
+
+    h1 + table, h2 + table, h3 + table, h4 + table, h5 + table, h6 + table {
+        margin-top: 0.5em !important;            /* Reduce gap between header and table */
+        page-break-before: avoid !important;     /* Prevent break between header and table */
+        break-before: avoid !important;          /* CSS3 equivalent */
+    }
     /* Credits. ---------------------------------------------------- */
 
     del { /* Credits, i.e. author information. */
@@ -202,11 +208,13 @@ Auth: Nicklas Vraa
         border-top: 1px solid #292929 !important;
         border-bottom: 1px solid #292929 !important;
         border-collapse: collapse !important;
-        page-break-inside: avoid;
-        break-before: avoid-page;
-        orphans: 6;
+        page-break-inside: avoid !important;     /* Try to keep table on one page */
+        break-inside: avoid !important;          /* CSS3 equivalent */
+        break-before: avoid-page !important;
+        orphans: 3 !important;                   /* Minimum rows at bottom of page */
+        widows: 3 !important;    
     }
-
+      
     .landscape-table {
         page-break-before: always !important;
         page: landscape !important;    
