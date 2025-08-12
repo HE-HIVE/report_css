@@ -185,6 +185,9 @@ Auth: Nicklas Vraa
         border-top: 1px solid #292929 !important;
         border-bottom: 1px solid #292929 !important;
         border-collapse: collapse !important;
+        page-break-inside: avoid;
+        break-before: avoid-page;
+        orphans: 6;
     }
 
     .landscape-table {
