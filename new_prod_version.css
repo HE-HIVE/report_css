@@ -135,9 +135,7 @@ Auth: Nicklas Vraa
     }
 
     h1 + table, h2 + table, h3 + table, h4 + table, h5 + table, h6 + table {
-        margin-top: 0.5em !important;            /* Reduce gap between header and table */
         page-break-before: avoid !important;     /* Prevent break between header and table */
-        break-before: avoid !important;          /* CSS3 equivalent */
     }
     /* Credits. ---------------------------------------------------- */
 
